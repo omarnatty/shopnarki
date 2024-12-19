@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Narki Wig Shop</title>
+    <style>
+        body {
+            font-family:'Playfair Display', serif;
+
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #343a40;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        header {
+            background-color: #ba9812;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            font-weight: bold;
+            color: white;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #f8d7da;
+        }
+
+        .hero {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            background: url('img/diannao_c86783c6-9634-4316-893f-1df799721475.jpg') no-repeat center/cover;
+            height: 80vh;
+            color: white;
+            padding: 6rem 1rem;
+            position: relative;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        .hero h1, .hero p {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .button {
+            background-color: white;
+            color: #ba9812;
+            padding: 0.8rem 1.8rem;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 1rem;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #ba9812;
+            color: white;
+        }
+
+        .categories, .featured-products {
+            padding: 2.5rem;
+            background-color: white;
+            margin: 2rem auto;
+            max-width: 1200px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .categories h2, .featured-products h2 {
+            text-align: center;
+            color: #ba9812;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+
+        .categories .grid, .featured-products .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .categories .item, .featured-products .item {
+            text-align: center;
+            padding: 1.5rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #ffffff;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .categories .item:hover, .featured-products .item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .categories .item img, .featured-products .item img {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #363b41;
+            color: white;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        footer .social-icons {
+            margin: 1rem 0;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        footer .social-icons a {
+            color: white;
+            font-size: 1.8rem;
+            transition: color 0.3s;
+        }
+
+        footer .social-icons a:hover {
+            color: #ba9812;
+        }
+
+        .newsletter {
+            text-align: center;
+            padding: 2.5rem;
+            background-color: #f8f9fa;
+            margin-top: 2rem;
+        }
+
+        .newsletter input[type="email"] {
+            padding: 1rem;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            margin-right: 1rem;
+        }
+
+        .newsletter button {
+            padding: 1rem 2rem;
+            background-color: #ba9812;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .newsletter button:hover {
+            background-color: #ba9812;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="img/Snapinsta.app_191612107_682494535876789_6476940537160422986_n_1024.jpg" alt="" width="100px" height="80px">
+                <div class="logo">Shop Narki</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#categories">Categories</a>
+            <a href="#products">Products</a>
+            <a href="#contact">Contact</a>
+            <a href="#Accessories">Accessories</a>
+            
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="content">
+             <p>Explore premium wigs and accessories designed for your unique style.</p>
+            <button class="button" onclick="alert('Shop Now feature coming soon!')">Shop Now</button>
+        </div>
+        
+    </section>
+
+    <section id="categories" class="categories">
+        <h2>Shop by Category</h2>
+        <div class="grid">
+            <div class="item">
+                <img src="img/06f033885587f67b5d49fd471b214af6.jpg" alt="Human Hair Wigs">
+                <h3>Human Hair Wigs</h3>
+            </div>
+            <div class="item">
+                <img src="img/06f7ba2d6c904c2f8676d9447cc53d51 - Copy.jpg" alt="Synthetic Wigs">
+                <h3>Synthetic Wigs</h3>
+            </div>
+            <div class="item">
+                <img src="img/IMG_7417-388x388.jpg" alt="Accessories">
+                <h3>Accessories</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="featured-products">
+        <h2>Featured Products</h2>
+        <div class="grid">
+            <div class="item">
+                <img src="img/1f2f2b1e691e5a23d73664882f56113d.jpg" alt="Product 1" width="280px" height="280px">
+                <h3>Victoria-30” Double Drawn HD Lace Frontal Wigs - 30 / 200% /</h3>
+                <p>$50</p>
+                <button class="button">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="img/473a47e74286c9e4c5bba1d3ec8c43a0.jpg" alt="Product 2" width="280px" height="280px">
+                <h3>Loose Deep Wave 360 Lace Wig Glueless HD 360 Lace Wig 24inch</h3>
+                <p>$75</p>
+                <button class="button">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="img/b6ed02b1ec92b0e8ff82a7ffba2a0cfc.jpg" alt="Product 3" width="280px" height="280px">
+                <h3>200% Density Loose Deep Wave 5x5 Glueless Undetectable Top</h3>
+                <p>$100</p>
+                <button class="button">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="img/6210917e5686c744196aa6600332a322.jpg" alt="Product 1" width="280px" height="280px">
+                <h3>Veally Long Wavy Honey Blonde Wig for Women 26 Inch Middle</h3>
+                <p>$50</p>
+                <button class="button">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="img/14b09c812ee9a086d3026eec40b6c78e.jpg" alt="Product 2" width="280px" height="280px">
+                <h3>Carina Brazilian Remy Wave Human Hair Lace Wigs</h3>
+                <p>$75</p>
+                <button class="button">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="img/56e7c5d97ea721f69b094358bd97f8b3.jpg" alt="Product 3" width="280px" height="280px">
+                <h3>Reddish Brown Water Wave 6x5 13x4 HD Lace Full Frontal Wig Copper Color Glueless Human Hair Wig</h3>
+                <p>$100</p>
+                <button class="button">Add to Cart</button>
+            </div><div class="item">
+                <img src="img/93424e1daee72ceff02cde7ed286d2dc.jpg" alt="Product 1" width="280px" height="280px">
+                <h3>Highlight Orange Brown Lace Front Human Hair Wigs Body</h3>
+                <p>$50</p>
+                <button class="button">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="img/0c629800148f4e86b61e6b31dd89e046.jpg" alt="Product 2" width="280px" height="280px">
+                <h3>Deep Wave Lace Frontal Wig</h3>
+                <p>$80</p>
+                <button class="button">Add to Cart</button>
+            </div>
+        </div>
+
+        </div>
+    </section>
+
+    <section id="accessories" class="categories">
+        <h2>Accessories</h2>
+        <div class="grid">
+            <div class="item">
+                <img src="img/3F3936AF-FE3A-4957-9E4E-F060FA414FE3.webp" alt="Product 1">
+                <h3>TRESemme Cleanse & Replenish Conditioner – 900 ml</h3>
+                <p>$10</p>
+                <button class="button">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="img/IMG_6720-388x388.jpeg" alt="Product 1" class="ZoomImg">
+                <h3>Nubiance HRB-3 Hyperpigmentation Correcting Lotion, 500 ml</h3>
+                <p>$15</p>
+                <button class="button">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="img/46B797C5-6C1F-4CBD-874B-FB270B28678C-388x388.png" alt="Product 1">
+                <h3>Tgin Rose Water Frizz Free Hydrating Conditioner</h3>
+                <p>$19</p>
+                <button class="button">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="img/IMG_8432-250x250.jpeg" alt="Product 1">
+                <h3>Difeel Biotin Pro-Growth Hair Care 4-Pc Set</h3>
+                <p>$25</p>
+                <button class="button">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="img/IMG_5016.jpeg" alt="Product 1">
+                <h3>Cantu Shea Butter Leave In Conditioning Repair Cream 16 oz.(Improved Formula)</h3>
+                <p>$20</p>
+                <button class="button">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="img/IMG_3468-768x768.jpeg" alt="Product 1">
+                <h3>Cantu for Natural Hair Leave-In Conditioning Cream 12 oz.
+                </h3>
+                <p>$10</p>
+                <button class="button">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="img/IMG_7421-388x388.jpeg" alt="Product 1">
+                <h3>Camille Rose Naturals Almond Jai Twisting Butter (8 oz.)</h3>
+                <p>$10</p>
+                <button class="button">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="img/IMG_7005.jpeg" alt="Product 1">
+                <h3>Aunt Jackie’s Oh So Strong! Shine Boosting Moisturizer</h3>
+                <p>$10</p>
+                <button class="button">Add to Cart</button>
+            </div>
+        </div>
+
+        <button id="add-accessory" class="button">Add Accessory</button>
+    </section>
+
+    <section class="newsletter">
+        <h2>Stay Updated</h2>
+        <p>Subscribe to our newsletter for the latest offers and new arrivals.</p>
+        <input type="email" placeholder="Enter your email">
+        <button>Subscribe</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Shop Narki Wig Shop. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://x.com/?lang=en"><img src="img/x.png" width="30px" height="30px">  Twitter</a>
+            <a href="https://www.instagram.com/"><img src="img/ig.jpeg" width="30px" height="30px"> Instagram</a>
+            <a href="https://web.facebook.com/?_rdc=1&_rdr"><img src="img/fb.png" width="30px" height="30px"> Facebook</a>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.button').forEach(button => {
+            button.addEventListener('click', () => {
+                alert('Feature coming soon!');
+            });
+        });
+    </script>
+</body>
+</html>
