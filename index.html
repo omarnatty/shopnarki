@@ -6,8 +6,7 @@
     <title>Shop Narki Wig Shop</title>
     <style>
         body {
-            font-family:'Playfair Display', serif;
-
+            font-family: 'Playfair Display', serif;
             margin: 0;
             padding: 0;
             background-color: #f8f9fa;
@@ -71,6 +70,7 @@
             background-color: rgba(0, 0, 0, 0.5);
             z-index: 1;
         }
+
         .hero h1, .hero p {
             position: relative;
             z-index: 2;
@@ -104,29 +104,29 @@
             color: white;
         }
 
-        .categories, .featured-products {
+        .categories, .featured-products, .accessories {
             padding: 2.5rem;
             background-color: white;
             margin: 2rem auto;
-            max-width: 1200px;
+            max-width: 90%; /* Adjust max-width for responsiveness */
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
         }
 
-        .categories h2, .featured-products h2 {
+        .categories h2, .featured-products h2, .accessories h2 {
             text-align: center;
             color: #ba9812;
             margin-bottom: 1.5rem;
             font-size: 2rem;
         }
 
-        .categories .grid, .featured-products .grid {
+        .categories .grid, .featured-products .grid, .accessories .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
         }
 
-        .categories .item, .featured-products .item {
+        .categories .item, .featured-products .item, .accessories .item {
             text-align: center;
             padding: 1.5rem;
             border: 1px solid #ddd;
@@ -135,12 +135,12 @@
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        .categories .item:hover, .featured-products .item:hover {
+        .categories .item:hover, .featured-products .item:hover, .accessories .item:hover {
             transform: translateY(-5px);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        .categories .item img, .featured-products .item img {
+        .categories .item img, .featured-products .item img, .accessories .item img {
             max-width: 100%;
             border-radius: 5px;
             margin-bottom: 1rem;
@@ -180,7 +180,8 @@
 
         .newsletter input[type="email"] {
             padding: 1rem;
-            width: 300px;
+            width: 80%; /* Adjust width for responsiveness */
+            max-width: 300px;
             border: 1px solid #ccc;
             border-radius: 5px;
             outline: none;
@@ -201,7 +202,20 @@
             background-color: #ba9812;
         }
 
+        /* Media Queries */
+        @media screen and (max-width: 768px) { 
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .categories, .featured-products, .accessories {
+                padding: 1.5rem;
+            }
+            .hero {
+                padding: 4rem 1rem;
+            }
+        }
     </style>
+</head>
 </head>
 <body>
     <header>
